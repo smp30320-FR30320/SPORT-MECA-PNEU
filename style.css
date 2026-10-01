@@ -18,7 +18,7 @@ body {
         radial-gradient(circle at 100% 100%, #222 0, #050505 40%);
     line-height: 1.5;
     width: 100%;
-    overflow-x: hidden; /* empêche tout décalage horizontal */
+    overflow-x: hidden;
 }
 
 /* IMAGES */
@@ -35,11 +35,11 @@ section {
     margin: auto;
 }
 
-/* HERO – image d’accueil */
+/* HERO */
 .hero {
     width: 100%;
-    margin: 0; /* supprime le décalage */
-    padding: 0; /* supprime le décalage */
+    margin: 0;
+    padding: 0;
 }
 
 .hero img {
