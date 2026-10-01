@@ -1,4 +1,4 @@
-/* RESET propre (ne casse pas les images) */
+/* RESET propre */
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -17,25 +17,40 @@ body {
         radial-gradient(circle at 0 0, #222 0, #050505 40%),
         radial-gradient(circle at 100% 100%, #222 0, #050505 40%);
     line-height: 1.5;
+    width: 100%;
+    overflow-x: hidden; /* empêche tout décalage horizontal */
 }
 
-/* IMAGES – affichage correct */
+/* IMAGES */
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 4px;
 }
 
-/* SECTIONS – espace propre */
+/* SECTIONS */
 section {
     padding: 40px 20px;
     width: 100%;
-    max-width: 1200px;
     margin: auto;
 }
 
-/* HEADER – carbone + glow rouge */
+/* HERO – image d’accueil */
+.hero {
+    width: 100%;
+    margin: 0; /* supprime le décalage */
+    padding: 0; /* supprime le décalage */
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
+}
+
+/* HEADER */
 header {
     background: linear-gradient(135deg, #111 0%, #1b1b1b 40%, #050505 100%);
     color: white;
@@ -45,24 +60,74 @@ header {
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
-/* LOGO – animation néon rouge */
+/* LOGO animation */
 @keyframes neonPulse {
-    0% {
-        filter: drop-shadow(0 0 4px #ff0000)
-                drop-shadow(0 0 8px #ff0000)
-                drop-shadow(0 0 12px #ff0000);
-    }
-    50% {
-        filter: drop-shadow(0 0 10px #ff3333)
-                drop-shadow(0 0 18px #ff3333)
-                drop-shadow(0 0 25px #ff3333);
-    }
-    100% {
-        filter: drop-shadow(0 0 4px #ff0000)
-                drop-shadow(0 0 8px #ff0000)
-                drop-shadow(0 0 12px #ff0000);
-    }
+    0% { filter: drop-shadow(0 0 4px #ff0000); }
+    50% { filter: drop-shadow(0 0 18px #ff3333); }
+    100% { filter: drop-shadow(0 0 4px #ff0000); }
 }
 
 header img {
-    width: 120
+    width: 120px;
+    margin-bottom: 10px;
+    animation: neonPulse 2.5s infinite ease-in-out;
+}
+
+/* TITRE */
+header h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff3333;
+}
+
+/* NAV */
+nav {
+    background: #0a0a0a;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, #ff0000, #ff6600);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* GALERIE GRID */
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ccc;
+    font-size: 14px;
+    border-top: 1px solid #222;
+    margin-top: 40px;
+}
