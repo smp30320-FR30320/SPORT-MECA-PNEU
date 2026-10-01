@@ -1,8 +1,10 @@
+/* STYLE RACING ROUGE / NOIR */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #222;
+  background: #0d0d0d;
+  color: #eee;
   animation: fadeIn 0.8s ease;
 }
 
@@ -11,9 +13,10 @@ body {
   to { opacity: 1; }
 }
 
+/* HEADER */
 header {
-  background: #222;
-  color: #fff;
+  background: #000;
+  color: #ff0000;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -30,25 +33,27 @@ header img {
   height: 70px;
 }
 
+/* NAVIGATION */
 nav {
-  background: #444;
+  background: #1a1a1a;
   display: flex;
   gap: 20px;
   padding: 10px 20px;
 }
 
 nav a {
-  color: #fff;
+  color: #ff0000;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #ffcc00;
-  transform: scale(1.1);
+  color: #ffffff;
+  transform: scale(1.15);
 }
 
+/* HERO */
 .hero {
   height: 350px;
   background-size: cover;
@@ -56,18 +61,22 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #fff;
   text-shadow: 2px 2px 8px black;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
+  border-bottom: 4px solid #ff0000;
   animation: fadeIn 1.2s ease;
 }
 
+/* CONTENU */
 .container {
   max-width: 1100px;
   margin: 20px auto;
   padding: 20px;
-  background: #fff;
+  background: #1a1a1a;
+  color: #fff;
+  border-left: 5px solid #ff0000;
   animation: slideUp 0.7s ease;
 }
 
@@ -76,25 +85,141 @@ nav a:hover {
   to { transform: translateY(0); opacity: 1; }
 }
 
+/* CARTES SERVICES */
 .service-card {
-  background: #fafafa;
+  background: #111;
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 2px solid #ff0000;
   transition: 0.3s;
   margin-bottom: 20px;
 }
 
 .service-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(255,0,0,0.4);
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 15px;
-  background: #222;
-  color: #ccc;
+  background: #000;
+  color: #ff0000;
   margin-top: 40px;
   font-size: 14px;
+}
+/* BARRE ROUGE SOUS LES TITRES */
+h2, h3 {
+  border-left: 6px solid #ff0000;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* EFFET CARBONE SUR LE HEADER */
+header {
+  background: repeating-linear-gradient(
+    45deg,
+    #000,
+    #000 10px,
+    #111 10px,
+    #111 20px
+  );
+  color: #ff0000;
+}
+
+/* LIGNES RACING SUR LE HERO */
+.hero {
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #ff0000, #660000);
+}
+
+/* BOUTONS ROUGES SPORT */
+button {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #cc0000;
+  transform: scale(1.1);
+}
+
+/* CARTES AVEC EFFET LUMIÈRE ROUGE */
+.service-card {
+  box-shadow: 0 0 15px rgba(255,0,0,0.2);
+}
+
+.service-card:hover {
+  box-shadow: 0 0 25px rgba(255,0,0,0.5);
+}
+
+/* EFFET ROUGE LÉGER SUR LES IMAGES HERO */
+.hero {
+  filter: brightness(0.9) saturate(1.2);
+}
+h2, h3 {
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+header::after {
+  content: "";
+  display: block;
+  height: 6px;
+  background: linear-gradient(90deg, #ff0000, #660000, #ff0000);
+  animation: racingLine 2s linear infinite;
+}
+
+@keyframes racingLine {
+  0% { background-position: 0 0; }
+  100% { background-position: 200px 0; }
+}
+body {
+  background: repeating-linear-gradient(
+    45deg,
+    #0d0d0d,
+    #0d0d0d 10px,
+    #111 10px,
+    #111 20px
+  );
+}
+.service-card {
+  box-shadow: 0 0 15px rgba(255,0,0,0.3);
+}
+
+.service-card:hover {
+  box-shadow: 0 0 25px rgba(255,0,0,0.6);
+}
+button {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #cc0000;
+  transform: scale(1.15);
 }
