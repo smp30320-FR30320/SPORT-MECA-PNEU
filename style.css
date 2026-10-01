@@ -43,7 +43,7 @@ section {
 }
 
 .hero img {
-    width: 70%;            /* prend toute la largeur */
+    width: 60%;            /* prend toute la largeur */
     max-height: 650px;      /* hauteur de bannière */
     object-fit: cover;      /* coupe proprement l’image */
     object-position: center;/* centre le sujet */
