@@ -6,35 +6,44 @@
     font-family: Arial, sans-serif;
 }
 
-/* BODY */
+/* BODY – fond carbone léger */
 body {
-    background: #f2f2f2;
-    color: #222;
+    background: #050505;
+    color: #f5f5f5;
+    background-image:
+        radial-gradient(circle at 0 0, #222 0, #050505 40%),
+        radial-gradient(circle at 100% 100%, #222 0, #050505 40%);
 }
 
-/* HEADER */
+/* HEADER – bande carbone + glow rouge */
 header {
-    background: #111;
+    background: linear-gradient(135deg, #111 0%, #1b1b1b 40%, #050505 100%);
     color: white;
     padding: 20px;
     text-align: center;
+    border-bottom: 2px solid #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
 }
 
 header img {
     width: 120px;
     margin-bottom: 10px;
+    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.6));
 }
 
 header h1 {
     font-size: 28px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
 }
 
-/* NAVIGATION */
+/* NAV – barre néon */
 nav {
-    background: #222;
+    background: #0a0a0a;
     padding: 12px 0;
     text-align: center;
+    border-bottom: 1px solid #333;
 }
 
 nav a {
@@ -42,72 +51,128 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     margin: 0 15px;
-    font-size: 16px;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, #ff0000, #ff6600);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 nav a:hover {
-    color: #ff0000;
+    color: #ff4444;
 }
 
-/* HERO (toutes pages) */
+/* HERO – fond racing + glow */
 .hero {
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 110px 20px;
     font-size: 32px;
     font-weight: bold;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 8px black;
+    position: relative;
+    overflow: hidden;
 }
 
-/* HERO ACCUEIL */
-.hero h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
+/* léger overlay carbone sur la hero */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0.03) 75%, transparent 75%, transparent);
+    background-size: 8px 8px;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
 }
 
+/* glow néon autour du texte */
+.hero h2,
 .hero p {
-    font-size: 20px;
-    margin-top: 10px;
+    position: relative;
+    z-index: 1;
 }
 
-/* BUTTON */
+/* BUTTON – néon rouge */
 .btn {
     display: inline-block;
-    background: #ff0000;
+    background: linear-gradient(135deg, #ff0000, #ff5500);
     color: white;
     padding: 12px 25px;
     margin-top: 20px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn:hover {
-    background: #cc0000;
+    background: linear-gradient(135deg, #ff5500, #ff0000);
+    box-shadow: 0 0 20px rgba(255, 80, 0, 0.9);
 }
 
-/* CONTAINER (toutes pages) */
+/* CONTAINER – bloc carbone propre */
 .container {
     width: 90%;
     max-width: 900px;
     margin: 40px auto;
-    background: white;
+    background: #111;
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
+    border: 1px solid #333;
 }
 
 .container h2 {
     margin-bottom: 20px;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffdddd;
 }
 
-/* SERVICES PREVIEW (accueil) */
+/* LISTES horaires / services */
+.container ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.container li {
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* SERVICES PREVIEW – cartes racing */
 .services-preview {
     padding: 40px;
     text-align: center;
+    color: #f5f5f5;
+}
+
+.services-preview h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 .cards {
@@ -119,22 +184,46 @@ nav a:hover {
 }
 
 .card {
-    background: #f5f5f5;
+    background: #151515;
     padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+    border: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+}
+
+/* effet bord néon discret */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover::before {
+    opacity: 1;
 }
 
 .card h3 {
     margin-bottom: 10px;
+    color: #ffbbbb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* FOOTER */
 footer {
-    background: #111;
-    color: white;
+    background: #050505;
+    color: #999;
     text-align: center;
     padding: 15px;
     margin-top: 40px;
+    border-top: 1px solid #333;
+    font-size: 13px;
 }
