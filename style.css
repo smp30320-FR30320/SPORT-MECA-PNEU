@@ -43,11 +43,14 @@ section {
 }
 
 .hero img {
-    width: 100%;
-    height: auto;
+    width: 80%;          /* réduit la taille */
+    max-width: 900px;    /* limite la largeur sur grand écran */
+    margin: 0 auto;      /* centre l’image */
     display: block;
     border-radius: 6px;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
+}
+
 }
 
 /* HEADER */
