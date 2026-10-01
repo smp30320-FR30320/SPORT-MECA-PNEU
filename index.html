@@ -3,52 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPORT MECA PNEU</title>
+    <title>Sport Meca Pneu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <img src="logo.svg" alt="Logo SPORT MECA PNEU">
-    <h1>SPORT MECA PNEU</h1>
-</header>
+    <!-- HEADER -->
+    <header>
+        <img src="images/logo.png" alt="Logo Sport Meca Pneu">
+        <h1>Sport Meca Pneu</h1>
+    </header>
 
-<nav>
-    <a href="index.html">Accueil</a>
-    <a href="services.html">Services</a>
-    <a href="horaires.html">Horaires</a>
-    <a href="apropos.html">À propos</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<section class="hero" style="background-image:url('photos/accueil.jpg');">
-    <h2>Bienvenue chez SPORT MECA PNEU</h2>
-    <p>Mécanique – Pneus – Performance – Entretien</p>
-    <a href="services.html" class="btn">Voir nos services</a>
-</section>
+    <!-- HERO IMAGE -->
+    <section class="hero" id="accueil">
+        <img src="images/accueil.jpg" alt="Photo du garage Sport Meca Pneu">
+    </section>
 
-<section class="services-preview">
-    <h2>Nos prestations</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Montage & Équilibrage</h3>
-            <p>Pneus tourisme, utilitaires, 4x4 et sport.</p>
+    <!-- SERVICES -->
+    <section id="services">
+        <h2>Nos Services</h2>
+        <p>Sport Meca Pneu vous propose un service professionnel pour tous types de véhicules :</p>
+
+        <ul>
+            <li>Montage & équilibrage pneus</li>
+            <li>Pneus neufs & occasions</li>
+            <li>Réparation mécanique</li>
+            <li>Entretien complet</li>
+            <li>4x4, utilitaires, agricoles</li>
+        </ul>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="galerie">
+        <h2>Galerie</h2>
+        <p>Quelques réalisations et véhicules passés au garage :</p>
+
+        <div class="galerie-grid">
+            <img src="images/photo1.jpg" alt="Photo garage 1">
+            <img src="images/photo2.jpg" alt="Photo garage 2">
+            <img src="images/photo3.jpg" alt="Photo garage 3">
         </div>
-        <div class="card">
-            <h3>Mécanique</h3>
-            <p>Freins, vidange, amortisseurs, diagnostics.</p>
-        </div>
-        <div class="card">
-            <h3>Performance</h3>
-            <p>Optimisation, préparation, entretien sport.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    © 2026 SPORT MECA PNEU — Tous droits réservés
-</footer>
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>📍 Adresse : Marguerittes, 30320</p>
+        <p>📞 Téléphone : 04 66 75 00 30</p>
+        <p>📧 Email : contact@sportmecapneu.fr</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Sport Meca Pneu – Tous droits réservés
+    </footer>
 
 </body>
 </html>
